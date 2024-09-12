@@ -21,7 +21,30 @@ def change_sign(x: float) -> float:
 
 
 def switch_case(number: int) -> None:
-    pass
+    if number == 1:
+        num1 = float(input("Введите первое число: "))
+        num2 = float(input("Введите второе число: "))
+        print(f"Результат {num1} + {num2} = {add(num1, num2)}")
+    elif number == 2:
+        num1 = float(input("Введите первое число: "))
+        num2 = float(input("Введите второе число: "))
+        print(f"Результат {num1} - {num2} = {sub(num1, num2)}")
+    elif number == 3:
+        num1 = float(input("Введите первое число: "))
+        num2 = float(input("Введите второе число: "))
+        print(f"Результат {num1} * {num2} = {multiply(num1, num2)}")
+    elif number == 4:
+        num1 = float(input("Введите первое число: "))
+        num2 = float(input("Введите второе число: "))
+        try:
+            print(f"Результат {num1} / {num2} = {divide(num1, num2)}")
+        except ValueError as e:
+            print(e)
+    elif number == 5:
+        num = float(input("Введите число: "))
+        print(f"Результат -1 * {num} = {change_sign(num)}")
+    else:
+        print("Некорректный выбор. Попробуйте снова.")
 
 
 def main() -> None:
